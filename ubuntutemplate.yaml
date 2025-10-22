@@ -1,4 +1,4 @@
-apiVersion: vmoperator.vmware.com/v1alpha4
+apiVersion: vmoperator.vmware.com/v1alpha3
 kind: VirtualMachine
 metadata:
   name: ben-test
