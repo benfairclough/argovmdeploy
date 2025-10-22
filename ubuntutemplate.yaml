@@ -9,21 +9,22 @@ spec:
   imageName: vmi-4c48b6f40db2f6384
   className: best-effort-xsmall
   storageClass: home-mgmt-cl01-optimal-datastore-default-policy-raid5
+  network:
   bootstrap:
     cloudInit:
       cloudConfig: {}
-#---
-#apiVersion: vmoperator.vmware.com/v1alpha4
-#kind: VirtualMachineService
-#metadata:
-#  name: ubuntuvm-service
-#  namespace: supvm
-#spec:
-#  selector:
-#    app: ubuntuvm
-#  type: LoadBalancer
-#  ports:
-#  - name: ssh
-#    port: 22
-#    protocol: TCP
-#    targetPort: 22
+---
+apiVersion: vmoperator.vmware.com/v1alpha4
+kind: VirtualMachineService
+metadata:
+  name: ubuntuvm-service
+  namespace: supvm
+spec:
+  selector:
+    app: ubuntuvm
+  type: LoadBalancer
+  ports:
+  - name: ssh
+    port: 22
+    protocol: TCP
+    targetPort: 22
