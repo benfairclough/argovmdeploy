@@ -1,17 +1,11 @@
-apiVersion: vmoperator.vmware.com/v1alpha1
+apiVersion: vmoperator.vmware.com/v1alpha4
 kind: VirtualMachine
 metadata:
-  name: ubuntuvm
-  namespace: supvm
-  labels:
-    app: ubuntuvm
+  name: ben-test
 spec:
-  imageName: ubu-template
-  className: best-effort-xsmall
-  powerState: poweredOn
+  className:    best-effort-xsmall
+  imageName:    vmi-4c48b6f40db2f6384
   storageClass: home-mgmt-cl01-optimal-datastore-default-policy-raid5
-  networkInterfaces:
-  - networkType: nsx-t
-  vmMetadata:
-    configMapName: ubuntuvm-configmap
-    transport: OvfEnv
+  bootstrap:
+    cloudInit:
+      cloudConfig: {}
