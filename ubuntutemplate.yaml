@@ -6,7 +6,7 @@ metadata:
   labels:
     app: ubuntuvm
 spec:
-  imageName: ubu-template
+  imageName: vmi-4c48b6f40db2f6384
   className: best-effort-xsmall
   powerState: poweredOn
   storageClass: home-mgmt-cl01-optimal-datastore-default-policy-raid5
