@@ -24,3 +24,20 @@ metadata:
 data:
   hostname: ubuntuvm
   password: VMware1!VMware1!
+---
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachineService
+metadata:
+  name: ubuntuvm-service
+  namespace: supvm
+spec:
+  selector:
+    app: ubuntuvm
+  type: LoadBalancer
+  ports:
+  - name: ssh
+    port: 22
+    protocol: TCP
+    targetPort: 22
+  - name: ping
+    protocol: ICMP
