@@ -1,0 +1,26 @@
+apiVersion: vmoperator.vmware.com/v1alpha1
+kind: VirtualMachine
+metadata:
+  name: ubuntuvm
+  namespace: supvm
+  labels:
+    app: ubuntuvm
+spec:
+  imageName: ubu-template
+  className: best-effort-xsmall
+  powerState: poweredOn
+  storageClass: home-mgmt-cl01-optimal-datastore-default-policy-raid5
+  networkInterfaces:
+  - networkType: nsx-t
+  vmMetadata:
+    configMapName: ubuntuvm-configmap
+    transport: OvfEnv
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: ubuntuvm-configmap
+    namespace: supvm
+data:
+  hostname: ubuntuvm
+  password: VMware1!VMware1!
