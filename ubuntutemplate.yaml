@@ -8,7 +8,7 @@ metadata:
 spec:
   imageName: vmi-4c48b6f40db2f6384
   className: best-effort-xsmall
-  powerState: PoweredOn
+  powerState: poweredOn
   storageClass: home-mgmt-cl01-optimal-datastore-default-policy-raid5
   networkInterfaces:
   - networkType: nsx-t
