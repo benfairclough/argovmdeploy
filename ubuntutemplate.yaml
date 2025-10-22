@@ -10,9 +10,7 @@ spec:
   className: best-effort-xsmall
   powerState: PoweredOn
   storageClass: home-mgmt-cl01-optimal-datastore-default-policy-raid5
-  bootstrap:
-    cloudInit:
-      cloudConfig: { }
+
 ---
 apiVersion: vmoperator.vmware.com/v1alpha4
 kind: VirtualMachineService
