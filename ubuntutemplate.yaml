@@ -2,7 +2,7 @@ apiVersion: vmoperator.vmware.com/v1alpha4
 kind: VirtualMachine
 metadata:
   name: ubuntuvm
-  namespace: supvm
+  namespace: vmservice
   labels:
     app: ubuntuvm
 spec:
