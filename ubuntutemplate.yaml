@@ -1,4 +1,4 @@
-apiVersion: vmoperator.vmware.com/v1alpha3
+apiVersion: vmoperator.vmware.com/v1alpha4
 kind: VirtualMachine
 metadata:
   name: ubuntuvm
@@ -13,6 +13,13 @@ spec:
   bootstrap:
     cloudInit:
       cloudConfig: {}
+  network:
+    interfaces:
+      - name: eth0
+        network:
+          apiVersion: crd.nsx.vmware.com/v1alpha1
+          kind: Subnet
+          name: public-subnet-new
 ---
 apiVersion: vmoperator.vmware.com/v1alpha4
 kind: VirtualMachineService
