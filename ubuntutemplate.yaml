@@ -1,4 +1,4 @@
-vmserviceapiVersion: vmoperator.vmware.com/v1alpha4
+apiVersion: vmoperator.vmware.com/v1alpha4
 kind: VirtualMachine
 metadata:
   name: ubuntuvm
