@@ -1,4 +1,4 @@
-apiVersion: vmoperator.vmware.com/v1alpha4
+vmserviceapiVersion: vmoperator.vmware.com/v1alpha4
 kind: VirtualMachine
 metadata:
   name: ubuntuvm
@@ -25,7 +25,7 @@ apiVersion: vmoperator.vmware.com/v1alpha4
 kind: VirtualMachineService
 metadata:
   name: ubuntuvm-service
-  namespace: supvm
+  namespace: vmservice
 spec:
   selector:
     app: ubuntuvm
